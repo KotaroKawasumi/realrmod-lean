@@ -1,0 +1,21 @@
+import Superfusion.RMod.Constructive.ConnectorTableInverseCertificate
+import Superfusion.RMod.Constructive.ConnectorTableInverseCerts.A7B0
+import Superfusion.RMod.Constructive.ConnectorTableInverseCerts.A7B1
+import Superfusion.RMod.Constructive.ConnectorTableInverseCerts.A7B2
+import Superfusion.RMod.Constructive.ConnectorTableInverseCerts.A7B3
+import Superfusion.RMod.Constructive.ConnectorTableInverseCerts.A7B4
+import Superfusion.RMod.Constructive.ConnectorTableInverseCerts.A7B5
+import Superfusion.RMod.Constructive.ConnectorTableInverseCerts.A7B6
+import Superfusion.RMod.Constructive.ConnectorTableInverseCerts.A7B7
+
+set_option autoImplicit false
+set_option maxHeartbeats 0
+set_option maxRecDepth 100000
+
+namespace Superfusion
+namespace RModCoordinate
+namespace ConnectorTableLaws
+
+end ConnectorTableLaws
+end RModCoordinate
+end Superfusion

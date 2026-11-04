@@ -1,0 +1,60 @@
+{
+  "source_repository": "KotaroKawasumi/Superfusion-redo",
+  "source_commit": "0fdab699a692daf5a7f23a4aaed6d7c29c90cd3c",
+  "source_commit_date": "2026-09-28",
+  "entry_module": "Solution",
+  "proof_modules": 2877,
+  "proof_source_bytes": 97250854,
+  "proof_source_lines": 1338787,
+  "proof_module_counts": {
+    "RMod": 2140,
+    "Solution.lean": 1,
+    "Superfusion": 736
+  },
+  "additional_original_lean_files": [
+    "Challenge.lean",
+    "verification/StackingFinalChecks.lean"
+  ],
+  "all_retained_lean_sources_identical_to_source_commit": true,
+  "copied_file_checksums": "SOURCE_SHA256SUMS",
+  "copied_file_path_mapping": {
+    "verification/historical/StackingCompletedAxiomAudit.log": "verification/StackingCompletedAxiomAudit.log",
+    "verification/historical/StackingCompletedAxioms.log": "verification/StackingCompletedAxioms.log",
+    "verification/historical/StackingCompletedVerification.json": "verification/StackingCompletedVerification.json"
+  },
+  "packaging_changes": [
+    "Set the default Lake target to Solution.",
+    "Use Superfusion.+ and RMod.+ library globs for the retained submodules; omit unused original umbrella modules.",
+    "Preserve the original package name, require declarations, manifest and toolchain.",
+    "Provide new publication documentation, source checksums and gitignore.",
+    "Retain compact historical verification records under verification/historical.",
+    "Apply Apache-2.0 to this publication package, retain original source notices, and include LICENSE and NOTICE.",
+    "Publish the README in English."
+  ],
+  "original_lakefile_sha256": "57f6152d2fc5aa8ff684798bd8e6f04c255860f1c7e59dd48897dc15a9ba57db",
+  "packaged_lakefile_sha256": "7d6e0b8a1663e1027d64dbe25cd6ab9f2ecc93b39016f3a1b01ef30c76f86ba2",
+  "original_lean_sources_with_license_or_copyright_text": [
+    "Superfusion/Gauge/RealFuseSpecPeel3.lean"
+  ],
+  "historical_verification": "verification/historical/StackingCompletedVerification.json",
+  "extraction_validation": {
+    "source_commit_comparison": "passed",
+    "static_import_closure": "passed",
+    "lean_header_parser": "passed with Lean 4.31.0 on all 2879 retained Lean files",
+    "proof_source_forbidden_token_scan": "passed",
+    "external_file_read_token_scan": "no matches",
+    "new_package_clean_build": "not run",
+    "new_package_axiom_check": "not run",
+    "comparator_rerun": "not run",
+    "local_dependency_completeness": "passed",
+    "proof_imports_challenge": false,
+    "copied_files_checked_against_git_blob_ids": 2885,
+    "config_syntax_and_preserved_dependencies": "passed",
+    "historical_axiom_log_names_and_allowed_axioms": "passed for 52 declarations",
+    "documentation_links": "passed",
+    "case_insensitive_filename_collisions": "none",
+    "common_private_key_and_token_patterns": "no matches"
+  },
+  "license_status": "Apache-2.0 selected by the project owner; original source notices preserved.",
+  "license": "Apache-2.0"
+}

@@ -1,0 +1,52 @@
+import RMod.BrundanEllis.StackingReferenceHexagonMiddle5
+import RMod.BrundanEllis.StackingReferenceSparseMatrixCheck
+
+/-! Seven closed product identities for one reference triple.
+The proof uses only verified atomic maps and ordinary kernel reduction. -/
+set_option autoImplicit false
+set_option Elab.async false
+set_option maxRecDepth 100000
+set_option maxHeartbeats 0
+set_option maxErrors 1
+set_option linter.unusedSimpArgs false
+namespace RMod.BrundanEllis.Stacking.ReferenceCommutor.HexagonCases5
+open Superfusion
+
+theorem left0Middle5_eq_case_2_1 : left0Middle5 2 1 = outerRightZ 5 2 1 * associatorZ 5 2 1 := by
+  simp only [← tripleSparseMul_eq]
+  apply tripleMatrixCheck_sound
+  decide +kernel
+
+theorem left1Middle5_eq_case_2_1 : left1Middle5 2 1 = associatorZ 2 5 1 * innerLeftZ 5 2 1 := by
+  simp only [← tripleSparseMul_eq]
+  apply tripleMatrixCheck_sound
+  decide +kernel
+
+theorem right0Middle5_eq_case_2_1 : right0Middle5 2 1 = innerRightZ 5 2 1 * associatorZ 5 2 1 := by
+  simp only [← tripleSparseMul_eq]
+  apply tripleMatrixCheck_sound
+  decide +kernel
+
+theorem right1Middle5_eq_case_2_1 : right1Middle5 2 1 = associatorInverseZ 5 1 2 * right0Middle5 2 1 := by
+  simp only [← tripleSparseMul_eq]
+  apply tripleMatrixCheck_sound
+  decide +kernel
+
+theorem right2Middle5_eq_case_2_1 : right2Middle5 2 1 = innerLeftZ 5 1 2 * right1Middle5 2 1 := by
+  simp only [← tripleSparseMul_eq]
+  apply tripleMatrixCheck_sound
+  decide +kernel
+
+theorem leftFinal5_case_2_1 : ((-1 : ℤ) ^ (leftScaleBit 5 2 1).val * positiveScale (leftScaleExponent 5 2 1)) •
+      (associatorZ 2 1 5 * left0Middle5 2 1) = negativeScale (leftScaleExponent 5 2 1) • (innerRightZ 2 5 1 * left1Middle5 2 1) := by
+  simp only [← tripleSparseMul_eq]
+  apply tripleMatrixCheck_sound
+  decide +kernel
+
+theorem rightFinal5_case_2_1 : ((-1 : ℤ) ^ (rightScaleBit 5 2 1).val * positiveScale (rightScaleExponent 5 2 1) *
+      (RMod.ConstructiveConnectorTable.inverseScale 5 1 2 : ℤ)) • outerLeftZ 5 2 1 = negativeScale (rightScaleExponent 5 2 1) • (associatorZ 1 5 2 * right2Middle5 2 1) := by
+  simp only [← tripleSparseMul_eq]
+  apply tripleMatrixCheck_sound
+  decide +kernel
+
+end RMod.BrundanEllis.Stacking.ReferenceCommutor.HexagonCases5

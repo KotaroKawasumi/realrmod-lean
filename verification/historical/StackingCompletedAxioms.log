@@ -1,0 +1,64 @@
+Memory guard: LEAN_NUM_THREADS=1; process group physical footprint limit 3500 MB; stop on critical OS pressure or free percentage below 35.
+Verification process group: 95957
+'RMod.BrundanEllis.superVecSymmetric' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RMod.BrundanEllis.totalCategoryCategory' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RMod.BrundanEllis.totalCategoryPreadditive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RMod.BrundanEllis.totalCategoryLinear' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RMod.BrundanEllis.evenCategoryPreadditive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RMod.BrundanEllis.grade' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RMod.BrundanEllis.superTensorProductEnriched' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RMod.BrundanEllis.gaugeTransform' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RMod.BrundanEllis.realRMod' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RMod.BrundanEllis.twistedPullback' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RMod.BrundanEllis.evenPair' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RMod.BrundanEllis.deligne' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RMod.BrundanEllis.delignePairing' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RMod.BrundanEllis.deligneMonoidal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RMod.BrundanEllis.pullbackSimple' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RMod.BrundanEllis.stack' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RMod.BrundanEllis.stackInclusion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RMod.BrundanEllis.stackMonoidal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RMod.BrundanEllis.twistMul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RMod.BrundanEllis.twistUnit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RMod.BrundanEllis.twistInv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RMod.BrundanEllis.twistClassCommGroup' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RMod.BrundanEllis.degree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RMod.BrundanEllis.stackingSplit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RMod.BrundanEllis.superVecSymmetric_data' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RMod.BrundanEllis.totalCategoryCategory_data' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RMod.BrundanEllis.totalCategoryPreadditive_data' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RMod.BrundanEllis.totalCategoryLinear_data' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RMod.BrundanEllis.evenCategoryPreadditive_data' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RMod.BrundanEllis.grade_data' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RMod.BrundanEllis.superTensorProductEnriched_data' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RMod.BrundanEllis.gaugeTransform_data' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RMod.BrundanEllis.real_isBrauerWallReference' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RMod.BrundanEllis.reconstruction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RMod.BrundanEllis.equivalence_iff_gauge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RMod.BrundanEllis.sign_reconstruction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RMod.BrundanEllis.evenPair_data' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RMod.BrundanEllis.deligne_data' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RMod.BrundanEllis.pullbackSimple_data' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RMod.BrundanEllis.stack_data' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RMod.BrundanEllis.twistMul_data' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RMod.BrundanEllis.stack_pullback' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RMod.BrundanEllis.gaugeEquivalentOn_equivalence' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RMod.BrundanEllis.twistUnit_data' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RMod.BrundanEllis.twistInv_data' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RMod.BrundanEllis.twistClassCommGroup_data' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RMod.BrundanEllis.degree_data' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RMod.BrundanEllis.stackingSplit_data' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RMod.BrundanEllis.Stacking.ReferenceCommutor.leftHexagon_equation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RMod.BrundanEllis.Stacking.ReferenceCommutor.rightHexagon_equation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RMod.BrundanEllis.Stacking.ReferenceCommutor.leftHexagon_real' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RMod.BrundanEllis.Stacking.ReferenceCommutor.rightHexagon_real' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+
+Memory guard finished: exit=0, peak group physical footprint=1032 MB.

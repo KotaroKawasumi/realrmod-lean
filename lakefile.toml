@@ -1,0 +1,33 @@
+name = "superfusion"
+version = "0.1.0"
+defaultTargets = ["Solution"]
+# Keep proof elaboration and kernel checking on one worker to bound memory.
+weakLeanArgs = ["-j1"]
+
+[leanOptions]
+autoImplicit = false
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+rev = "v4.31.0"
+
+[[require]]
+name = "checkdecls"
+git = "https://github.com/PatrickMassot/checkdecls.git"
+
+[[lean_lib]]
+name = "Superfusion"
+globs = ["Superfusion.+"]
+
+[[lean_lib]]
+name = "RMod"
+globs = ["RMod.+"]
+
+[[lean_lib]]
+name = "Challenge"
+roots = ["Challenge"]
+
+[[lean_lib]]
+name = "Solution"
+roots = ["Solution"]

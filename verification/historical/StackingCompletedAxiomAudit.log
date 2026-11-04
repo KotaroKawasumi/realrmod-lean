@@ -1,0 +1,2 @@
+PASS: all 48 registered targets and 4 reference hexagon declarations were checked in the exact expected order.
+PASS: every dependency uses only propext, Quot.sound and Classical.choice.

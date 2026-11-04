@@ -1,0 +1,10 @@
+import RMod.BrundanEllis.StackingReferenceHexagonEntries400
+import RMod.BrundanEllis.StackingReferenceHexagonEntries401
+import RMod.BrundanEllis.StackingReferenceHexagonEntries402
+import RMod.BrundanEllis.StackingReferenceHexagonEntries403
+import RMod.BrundanEllis.StackingReferenceHexagonEntries404
+import RMod.BrundanEllis.StackingReferenceHexagonEntries405
+import RMod.BrundanEllis.StackingReferenceHexagonEntries406
+import RMod.BrundanEllis.StackingReferenceHexagonEntries407
+
+/-! Independently checked triples sharing the first two labels. -/
