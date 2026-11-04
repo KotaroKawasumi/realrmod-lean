@@ -1,0 +1,14 @@
+{"utc": "2026-11-04T18:12:26.190496+00:00", "event": "reserve_slots_requested", "slots": [4, 5, 6, 7], "reason": "Service memory reached 61 GiB during the parallel coefficient-certificate phase."}
+{"utc": "2026-11-04T18:12:40.428819+00:00", "event": "slot_reserved", "slot": 7, "maximum_new_concurrent_compilers": 7}
+{"utc": "2026-11-04T18:21:22.495551+00:00", "event": "slot_reserved", "slot": 5, "maximum_new_concurrent_compilers": 6}
+{"utc": "2026-11-04T18:21:51.561456+00:00", "event": "slot_reserved", "slot": 6, "maximum_new_concurrent_compilers": 5}
+{"utc": "2026-11-04T18:22:49.760902+00:00", "guard_version": 2, "event": "guard_replaced", "previous_reservations_released": true, "target_reserved_slots": 4, "candidate_slots": [0, 1, 2, 3, 4, 5, 6, 7], "reason": "Use queued blocking locks to acquire the next available slots without interrupting compilers."}
+{"utc": "2026-11-04T18:23:23.887784+00:00", "guard_version": 2, "event": "slot_reserved", "slot": 2, "maximum_concurrent_compilers": 7}
+{"utc": "2026-11-04T18:25:31.066875+00:00", "guard_version": 2, "event": "slot_reserved", "slot": 6, "maximum_concurrent_compilers": 6}
+{"utc": "2026-11-04T18:27:29.183038+00:00", "guard_version": 2, "event": "slot_reserved", "slot": 4, "maximum_concurrent_compilers": 5}
+{"utc": "2026-11-04T18:27:33.012025+00:00", "guard_version": 2, "event": "slot_reserved", "slot": 0, "maximum_concurrent_compilers": 4}
+{"utc": "2026-11-04T19:55:08.880605+00:00", "guard_version": 3, "event": "six_compiler_limit_prepared", "reserve_slots": [1, 3], "previous_guard_reserved_slots": [0, 2, 4, 6], "reason": "All 99 TripleCerts files completed; preserve two reservations while releasing the previous four."}
+{"utc": "2026-11-04T19:55:09.406208+00:00", "guard_version": 3, "event": "handoff_slot_reserved", "slot": 3, "additional_reserved_slots": 1, "previous_guard_still_active": true}
+{"utc": "2026-11-04T19:55:12.790358+00:00", "guard_version": 3, "event": "handoff_slot_reserved", "slot": 1, "additional_reserved_slots": 2, "previous_guard_still_active": true}
+{"utc": "2026-11-04T19:55:45.400428+00:00", "guard_version": 3, "event": "concurrency_limit_changed", "maximum_concurrent_compilers": 6, "reason": "Previous four-slot reservation released after the two-slot replacement was ready; no compiler interrupted."}
+{"utc": "2026-11-04T20:01:19.720385+00:00", "event": "concurrency_limit_changed", "maximum_concurrent_compilers": 8, "reason": "TripleCerts completed and reference-hexagon compilation remained near 24 GiB with six compilers; released the final two reserved slots without interrupting compilers."}

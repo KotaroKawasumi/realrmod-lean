@@ -1,0 +1,92 @@
+{
+  "collected_at_utc": "2026-11-04T21:17:50.922204+00:00",
+  "service_state": "failed",
+  "source_commit": "d3cc66cb31a1120249b346dbdbe3d8d4ceeff907",
+  "source_tree": "c0a6614bfe1ed655766dc96ede25360c1daed669",
+  "source_status": "",
+  "dependencies_after_build": [
+    {
+      "name": "checkdecls",
+      "expected_revision": "3d425859e73fcfbef85b9638c2a91708ef4a22d4",
+      "actual_revision": "3d425859e73fcfbef85b9638c2a91708ef4a22d4",
+      "revision_matches": true,
+      "status": "",
+      "clean": true
+    },
+    {
+      "name": "mathlib",
+      "expected_revision": "fabf563a7c95a166b8d7b6efca11c8b4dc9d911f",
+      "actual_revision": "fabf563a7c95a166b8d7b6efca11c8b4dc9d911f",
+      "revision_matches": true,
+      "status": "",
+      "clean": true
+    },
+    {
+      "name": "Cli",
+      "expected_revision": "92564e5770e4d09f2d86dfbf8ada1e9c715b384c",
+      "actual_revision": "92564e5770e4d09f2d86dfbf8ada1e9c715b384c",
+      "revision_matches": true,
+      "status": "",
+      "clean": true
+    },
+    {
+      "name": "plausible",
+      "expected_revision": "63045536fe95024e6c18fc7b48e03f506701c5bc",
+      "actual_revision": "63045536fe95024e6c18fc7b48e03f506701c5bc",
+      "revision_matches": true,
+      "status": "",
+      "clean": true
+    },
+    {
+      "name": "LeanSearchClient",
+      "expected_revision": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843",
+      "actual_revision": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843",
+      "revision_matches": true,
+      "status": "",
+      "clean": true
+    },
+    {
+      "name": "importGraph",
+      "expected_revision": "5c7542ed018c78194f1e2b903eaf6a792b74c03d",
+      "actual_revision": "5c7542ed018c78194f1e2b903eaf6a792b74c03d",
+      "revision_matches": true,
+      "status": "",
+      "clean": true
+    },
+    {
+      "name": "proofwidgets",
+      "expected_revision": "24b0d9dc081c5423f8eec7e866c441e5184f29d9",
+      "actual_revision": "24b0d9dc081c5423f8eec7e866c441e5184f29d9",
+      "revision_matches": true,
+      "status": "",
+      "clean": true
+    },
+    {
+      "name": "aesop",
+      "expected_revision": "e3cb2f741431ce31bf73549fb52316a57368b06f",
+      "actual_revision": "e3cb2f741431ce31bf73549fb52316a57368b06f",
+      "revision_matches": true,
+      "status": "",
+      "clean": true
+    },
+    {
+      "name": "Qq",
+      "expected_revision": "f46324995fca5f0483b742e4eb4daec7f4ee50d2",
+      "actual_revision": "f46324995fca5f0483b742e4eb4daec7f4ee50d2",
+      "revision_matches": true,
+      "status": "",
+      "clean": true
+    },
+    {
+      "name": "batteries",
+      "expected_revision": "fa08db58b30eb033edcdab331bba000827f9f785",
+      "actual_revision": "fa08db58b30eb033edcdab331bba000827f9f785",
+      "revision_matches": true,
+      "status": "",
+      "clean": true
+    }
+  ],
+  "project_olean_count": 2878,
+  "solution_olean_exists": true,
+  "challenge_olean_exists": true
+}

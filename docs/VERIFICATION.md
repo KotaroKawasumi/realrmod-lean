@@ -4,6 +4,57 @@ The proof sources in this package are exact copies from
 `0fdab699a692daf5a7f23a4aaed6d7c29c90cd3c`. Historical verification of those sources
 and validation of the extracted package are separate records.
 
+## Fresh GCP rebuild on 4 November 2026 (UTC)
+
+The public repository was cloned anonymously from GitHub and checked out at
+[`d3cc66cb31a1120249b346dbdbe3d8d4ceeff907`](https://github.com/KotaroKawasumi/realrmod-lean/tree/d3cc66cb31a1120249b346dbdbe3d8d4ceeff907).
+The project had **zero `.olean` files before compilation**. Pinned Mathlib
+dependency artifacts were downloaded with `lake exe cache get`; no project
+artifacts from an earlier build were reused.
+
+| Check | Result |
+| --- | --- |
+| `lake build Solution` | Passed, 11,435 jobs; 7 h 17 min 22 s |
+| `lake build Challenge` | Passed, 8,559 jobs; 13.32 s |
+| First axiom query, `-M8192` | Stopped at the configured Lean memory limit; exit 134 |
+| Axiom-only retry, `-M65536` | Passed in 5.16 s; all 52 expected declarations, in order and without duplicates |
+| Permitted axioms | Only `propext`, `Quot.sound`, and `Classical.choice` |
+| Source and build inputs | Clean Git tree; 2,885 copied-file checksums verified; configuration and compiler hashes unchanged |
+| Dependencies after verification | All 10 pinned Git revisions matched and their working trees were clean |
+| Comparator, additional kernel replay and NanoDa | Not rerun |
+
+`Challenge` retains its intentional specification holes, so its log includes
+`sorry` warnings. The proof library does not import it. The completed `Solution`
+declarations passed the permitted-axiom audit.
+
+The VM ran Ubuntu 24.04 on x86_64 with 12 vCPUs and 96 GiB of RAM. The toolchain
+was Lean 4.31.0. Each compiler used `-j1`; a launcher executed the original Lean
+binary with unchanged arguments and at most eight concurrent compiler processes.
+Temporary slot reservations lowered concurrency during memory-intensive checks.
+The initial build service's peak memory, including file cache, was 75.12 GiB.
+The successful axiom query's maximum resident set was 8.12 GiB.
+
+The 8 GiB axiom-query limit was insufficient when loading the completed package.
+Only that query was repeated with a higher limit. No Lean source, build option,
+dependency revision or compiler binary was changed, and the project was not
+recompiled. The initial job's exit 134 and failed output are preserved; the
+separate axiom retry exited 0. The combined outcome is recorded in `result.json`.
+
+- [Combined result](../verification/gcp-20261104/result.json) and
+  [environment and timings](../verification/gcp-20261104/run.json).
+- [Full project build log](../verification/gcp-20261104/build.log) and
+  [specification build log](../verification/gcp-20261104/challenge.log).
+- [Successful axiom output](../verification/gcp-20261104/axiom-retry/axioms.log)
+  and [audit of all 52 declarations](../verification/gcp-20261104/axiom-retry/axiom-audit.json).
+- [Initial memory-limit failure](../verification/gcp-20261104/axioms.log),
+  [concurrency adjustments](../verification/gcp-20261104/concurrency-adjustments.jsonl),
+  and [final source/dependency audit](../verification/gcp-20261104/final-environment-audit.json).
+- [Checksums of the distributed evidence](../verification/gcp-20261104/SHA256SUMS).
+
+Subsequent publication changes add documentation and verification records. The
+Lean sources, toolchain, manifest and Lake configuration remain identical to the
+tested public commit.
+
 ## Historical results on 28 September 2026
 
 The original run completed the 48 targets listed in [comparator.json](../comparator.json):
@@ -36,8 +87,8 @@ Linux Landrun sandbox, or production Palomar attestation.
 
 The summary retains hashes of the original detailed logs. Most of those logs and
 the original Comparator runner are not distributed in this source package. The
-three files above are historical evidence, not a claim that the extracted package
-has been rebuilt.
+three files above document the original run. The later package rebuild is
+recorded separately in the GCP section above.
 
 ## Extraction checks
 
@@ -56,18 +107,21 @@ plus the original `Challenge.lean` and `verification/StackingFinalChecks.lean`.
   default target and the two library globs are adjusted in `lakefile.toml`.
 - File checksums, configuration syntax and documentation links are checked.
 
-[SOURCE.json](../SOURCE.json) records these checks and explicitly marks the new
-package's clean build, axiom check and Comparator rerun as not run.
+[SOURCE.json](../SOURCE.json) records these checks and links the subsequent GCP
+build and axiom audit. The Comparator has not been rerun for this package.
 
 ## Rebuild the extracted package
 
-Run from a fresh checkout with Lean available through elan:
+Run from a fresh checkout with Lean available through elan. To reproduce the
+recorded revision:
 
 ```sh
+git checkout d3cc66cb31a1120249b346dbdbe3d8d4ceeff907
 shasum -a 256 -c SOURCE_SHA256SUMS
 lake exe cache get
 LEAN_NUM_THREADS=1 lake build Solution
-LEAN_NUM_THREADS=1 lake env lean -j1 -M6144 verification/StackingFinalChecks.lean
+LEAN_NUM_THREADS=1 lake build Challenge
+LEAN_NUM_THREADS=1 lake env lean -j1 -M65536 verification/StackingFinalChecks.lean
 ```
 
 The last command prints dependencies for all 48 targets and the four reference
@@ -76,11 +130,9 @@ the order given by the file, and that the output lists only the three permitted
 axioms. The historical axiom output provides a reference. `#print axioms` prints
 dependencies; its process exit status alone does not enforce the permitted list.
 
-`Challenge` can be compiled separately with `lake build Challenge` when preparing
-a Comparator comparison. Its registered `sorry` holes are intentional and are
-not proof results. `Solution` does not import `Challenge`.
+`Challenge` is compiled separately for the specification check. Its registered
+`sorry` holes are intentional and are not proof results. `Solution` does not
+import `Challenge`.
 
-Rebuilding is recommended to establish that this smaller distribution is usable
-on its own. It is not a prerequisite imposed by GitHub, and additional independent
-checkers are not needed merely to publish the sources. Until the new build is
-run, describe the package as an extraction of the historically verified sources.
+These commands reproduce compilation and axiom inspection. A new Comparator
+comparison, additional kernel replay and NanoDa remain outside this GCP record.

@@ -43,8 +43,8 @@
     "lean_header_parser": "passed with Lean 4.31.0 on all 2879 retained Lean files",
     "proof_source_forbidden_token_scan": "passed",
     "external_file_read_token_scan": "no matches",
-    "new_package_clean_build": "not run",
-    "new_package_axiom_check": "not run",
+    "new_package_clean_build": "passed on GCP; verification/gcp-20261104/result.json",
+    "new_package_axiom_check": "passed for all 52 declarations after an axiom-only retry with a higher memory limit; verification/gcp-20261104/axiom-retry/axiom-audit.json",
     "comparator_rerun": "not run",
     "local_dependency_completeness": "passed",
     "proof_imports_challenge": false,
@@ -56,5 +56,14 @@
     "common_private_key_and_token_patterns": "no matches"
   },
   "license_status": "Apache-2.0 selected by the project owner; original source notices preserved.",
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "package_verification": {
+    "tested_public_commit": "d3cc66cb31a1120249b346dbdbe3d8d4ceeff907",
+    "completed_at_utc": "2026-11-04T21:16:10.746137+00:00",
+    "result": "verification/gcp-20261104/result.json",
+    "environment": "verification/gcp-20261104/run.json",
+    "details": "docs/VERIFICATION.md",
+    "lean_sources_and_build_configuration_unchanged": true,
+    "comparator_rerun": false
+  }
 }

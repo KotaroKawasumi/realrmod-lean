@@ -44,7 +44,7 @@ git clone https://github.com/KotaroKawasumi/realrmod-lean.git
 cd realrmod-lean
 lake exe cache get
 LEAN_NUM_THREADS=1 lake build Solution
-LEAN_NUM_THREADS=1 lake env lean -j1 -M6144 verification/StackingFinalChecks.lean
+LEAN_NUM_THREADS=1 lake env lean -j1 -M65536 verification/StackingFinalChecks.lean
 ```
 
 The toolchain is **Lean 4.31.0**. The unchanged `lake-manifest.json` pins mathlib
@@ -55,7 +55,9 @@ artifacts; this package's proofs still need to be compiled.
 `lake build` also selects `Solution`. The original package name `superfusion`,
 dependency declarations and Lean options are retained. In particular, `-j1`
 limits each Lean process to one worker. The project is substantial: its proof
-sources contain approximately 1.34 million lines. A full build can be lengthy.
+sources contain approximately 1.34 million lines. The recorded GCP project build
+used a 12-vCPU, 96 GiB VM and took **7 hours 17 minutes 22 seconds**. See the
+[verification record](docs/VERIFICATION.md) for resource limits and timings.
 
 To access the proved declarations in a Lean file:
 
@@ -82,10 +84,15 @@ checks, and declaration comparison by a patched local Comparator. The permitted
 axioms are `propext`, `Quot.sound`, and `Classical.choice`. Additional kernel replay
 and NanoDa were not run; this is not a production Palomar verification claim.
 
-For this extracted package, source identity, import completeness and packaging
-checks have been performed. A clean build and axiom check of this new directory
-have **not** been rerun. [Verification details](docs/VERIFICATION.md) distinguish
-the historical results from the extraction checks and give reproduction commands.
+The extracted package was rebuilt from a fresh GitHub clone on GCP on
+**4 November 2026 (UTC)**, testing public commit
+`d3cc66cb31a1120249b346dbdbe3d8d4ceeff907`. `Solution`, `Challenge`, and the axiom
+audit of all **52 declarations** passed. The first axiom query reached its
+configured 8 GiB memory limit; an axiom-only retry with a 64 GiB limit passed,
+without changing the sources or recompiling the project. The GCP run did not
+repeat the Comparator or the additional independent checkers.
+[Verification details and logs](docs/VERIFICATION.md) distinguish these results
+from the historical checks and give reproduction commands.
 
 ## Source provenance
 

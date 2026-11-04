@@ -1,0 +1,51 @@
+{
+  "platform": "Google Compute Engine",
+  "os": "Ubuntu 24.04, x86_64",
+  "machine_type": "n4-custom-12-98304",
+  "vcpus": 12,
+  "configured_memory_gib": 96,
+  "disk_gb": 200,
+  "disk_type": "hyperdisk-balanced",
+  "tested_public_commit": "d3cc66cb31a1120249b346dbdbe3d8d4ceeff907",
+  "tested_source_tree": "c0a6614bfe1ed655766dc96ede25360c1daed669",
+  "original_source_commit": "0fdab699a692daf5a7f23a4aaed6d7c29c90cd3c",
+  "started_at_utc": "2026-11-04T13:51:17+00:00",
+  "project_build_started_at_utc": "2026-11-04T13:53:00+00:00",
+  "project_build_finished_at_utc": "2026-11-04T21:10:22+00:00",
+  "verification_completed_at_utc": "2026-11-04T21:16:10.746137+00:00",
+  "lean_version": "Lean (version 4.31.0, x86_64-unknown-linux-gnu, commit 68218e876d2a38b1985b8590fff244a83c321783, Release)",
+  "lake_version": "Lake version 5.0.0-src+68218e8 (Lean version 4.31.0)",
+  "original_lean_binary_sha256": "e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550",
+  "project_oleans_before_build": 0,
+  "project_oleans_after_build_and_challenge": 2878,
+  "dependency_artifacts": "Pinned mathlib dependency cache; no project artifacts reused from an earlier build.",
+  "solution_build": {
+    "elapsed": "7:17:22",
+    "max_rss_kib": 33557104,
+    "exit_code": 0
+  },
+  "challenge_build": {
+    "elapsed": "0:13.32",
+    "max_rss_kib": 7182100,
+    "exit_code": 0
+  },
+  "axiom_attempt_1": {
+    "elapsed": "0:04.85",
+    "max_rss_kib": 8505020,
+    "exit_code": 134,
+    "lean_memory_limit_mib": 8192
+  },
+  "axiom_attempt_2": {
+    "elapsed": "0:05.16",
+    "max_rss_kib": 8516676,
+    "exit_code": 0,
+    "lean_memory_limit_mib": 65536
+  },
+  "build_service_memory_peak_bytes_including_file_cache": 80664555520,
+  "lean_workers_per_compiler": 1,
+  "maximum_concurrent_compilers": 8,
+  "concurrency_adjustments": "concurrency-adjustments.jsonl",
+  "resource_control": "A launcher executed the unchanged Lean 4.31.0 binary with unchanged arguments and at most eight compiler processes. Temporary slot reservations lowered concurrency during memory-intensive checks. The launcher and original binary hashes were checked before and after the axiom retry.",
+  "retry_scope": "Only the axiom query was repeated, with a higher Lean memory limit. No Lean source, toolchain, build configuration, dependency revision or compiled project artifact was replaced. Initial job exit 134 and failed axiom output are preserved; the separate axiom retry exited 0.",
+  "extra_comparator_kernel_replay_nanoda": "Not rerun."
+}

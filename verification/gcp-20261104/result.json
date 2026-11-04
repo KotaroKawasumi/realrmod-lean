@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "repository": "https://github.com/KotaroKawasumi/realrmod-lean",
+  "commit": "d3cc66cb31a1120249b346dbdbe3d8d4ceeff907",
+  "fresh_project_build": true,
+  "dependency_artifacts": "Pinned mathlib dependency cache",
+  "solution_build": "passed",
+  "challenge_build": "passed",
+  "axiom_audit": "passed",
+  "registered_targets": 48,
+  "axiom_outputs": 52,
+  "copied_source_checksums": 2885,
+  "tracked_and_untracked_source_changes": false,
+  "comparator_rerun": false,
+  "additional_kernel_replay": false,
+  "nanoda": false,
+  "lean_workers_per_compiler": 1,
+  "maximum_concurrent_compilers": 8,
+  "compiler": "Original Lean 4.31.0 binary; launcher only limits concurrent processes.",
+  "verification_completed_at_utc": "2026-11-04T21:16:10.746137+00:00",
+  "initial_job_exit_code": 134,
+  "initial_job_failure": "Only the axiom query exceeded its 8192 MiB Lean memory limit; Solution and Challenge builds passed.",
+  "successful_axiom_log": "axiom-retry/axioms.log",
+  "successful_axiom_audit": "axiom-retry/axiom-audit.json",
+  "axiom_attempts": [
+    {
+      "attempt": 1,
+      "lean_memory_limit_mib": 8192,
+      "exit_code": 134,
+      "outcome": "Lean memory limit exceeded",
+      "log": "axioms.log",
+      "timing": "axioms.time"
+    },
+    {
+      "attempt": 2,
+      "lean_memory_limit_mib": 65536,
+      "exit_code": 0,
+      "outcome": "passed",
+      "log": "axiom-retry/axioms.log",
+      "timing": "axiom-retry/axioms.time"
+    }
+  ],
+  "source_or_build_configuration_modified_for_retry": false,
+  "project_recompiled_for_retry": false
+}
