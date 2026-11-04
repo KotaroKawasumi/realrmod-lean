@@ -104,7 +104,7 @@ external data tables and unrelated experiments are omitted.
 
 ## License
 
-Copyright 2026 Kotaro Kawasumi and the Superfusion contributors.
+Copyright 2026 Kotaro Kawasumi.
 
 Licensed under the [Apache License, Version 2.0](LICENSE). Existing copyright
 notices are preserved. Dependencies retain their own licenses.
