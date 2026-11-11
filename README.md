@@ -10,6 +10,16 @@ dated 28 September 2026. The proof entry point is [Solution.lean](Solution.lean)
 This package contains its 2,877 project source dependencies, including the entry
 point, together with the specification and axiom checks.
 
+## Papers
+
+- [Main paper (PDF)](papers/weaklypointed.pdf): *Weakly Pointed Fusion
+  Pi-supercategories over Fields k with char k not equal to 2*, by Kotaro Kawasumi.
+- [Challenge reference (PDF)](papers/main_challenge.pdf): definitions and
+  statements for the real case.
+
+The main paper treats fields of characteristic different from 2. The Lean
+formalization in this repository covers the real case described below.
+
 ## Mathematical scope
 
 | Result | Declaration and implementation |
@@ -106,8 +116,9 @@ shasum -a 256 -c SOURCE_SHA256SUMS
 
 The extraction preserves all retained Lean files exactly. The Lake configuration
 selects `Solution` by default and uses submodule globs for the retained libraries.
-The original umbrella modules, development history, papers, generated binaries,
-external data tables and unrelated experiments are omitted.
+The original umbrella modules, development history, generated build artifacts,
+external data tables and unrelated experiments are omitted. The PDFs linked
+above are distributed separately from the Lean source extraction.
 
 ## License
 
